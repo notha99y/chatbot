@@ -4,6 +4,6 @@ langchain_chroma
 langchain-ollama
 langgraph
 chromadb
-fitz
+tqdm
 PyMuPDF
 streamlit
