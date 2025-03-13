@@ -1,6 +1,7 @@
 from pathlib import Path
 
 import fitz
+from tqdm import tqdm
 from langchain.docstore.document import Document
 from langchain.retrievers import ParentDocumentRetriever
 from langchain.storage import LocalFileStore
@@ -9,7 +10,7 @@ from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain_chroma import Chroma
 from langchain_ollama import OllamaEmbeddings
 
-doc_dir = "knowledge_base/pdf"
+doc_dir = "knowledge_base/"
 
 pdf_paths = sorted(list(Path(doc_dir).glob("*.pdf")))
 
@@ -42,7 +43,7 @@ retriever = ParentDocumentRetriever(
 
 docs = []
 
-for p in pdf_paths:
+for p in tqdm(pdf_paths):
     pdf_doc = fitz.open(str(p))
     pdf_str = ""
     for page in pdf_doc:
