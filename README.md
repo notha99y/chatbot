@@ -1,5 +1,5 @@
 # About
-This is the code repository accompanying the Medium Article 
+This is the code repository accompanying the Medium Article: [A Starter Pack to building a local Chatbot using Ollama, LangGraph and RAG](medium.com/kredivotechblog/a-starter-pack-to-building-a-local-chatbot-using-ollama-langgraph-and-rag-6d25b7f43d07)
 
 
 <img src="images/chat_screenshot.png" width=560px>
